@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.the.news.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_userProfile"
+            app:destination="@id/navigation_userProfile" />
+
+        <action
+            android:id="@+id/action_nav_home_to_profile"
+            app:destination="@id/navigation_profile" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_follow"
+        android:name="com.the.news.ui.following.FollowingFragment"
+        tools:layout="@layout/fragment_following">
+        <action
+            android:id="@+id/action_nav_follow_to_nav_comment"
+            app:destination="@+id/navigation_comment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.the.news.ui.news.NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_nav_news_to_nav_details"
+            app:destination="@id/navigation_details" />
+        <action
+            android:id="@+id/action_nav_news_to_nav_comment"
+            app:destination="@id/navigation_comment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.the.news.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.the.news.ui.favourite.FavouriteFragment"
+        tools:layout="@layout/fragment_favourite">
+        <action
+            android:id="@+id/action_nav_favourite_to_nav_details"
+            app:destination="@id/navigation_details" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_details"
+        android:name="com.the.news.ui.details.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="article"
+            app:argType="com.the.news.domain.model.Article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_comment"
+        android:name="com.the.news.ui.comment.CommentFragment"
+        tools:layout="@layout/fragment_comment">
+
+        <action
+            android:id="@+id/action_nav_comment_to_nav_home"
+            app:destination="@id/navigation_home" />
+
+        <argument
+            android:name="comment"
+            app:argType="com.the.news.data.dbfirebase.model.UsersModel" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.the.news.ui.profile.Profile"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_userProfile"
+        android:name="com.the.news.ui.userprofile.UserProfile"
+        tools:layout="@layout/fragment_user_profile">
+
+        <action
+            android:id="@+id/action_nav_userProfile_to_nav_home"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_makePost"
+        android:name="com.the.news.ui.post.MakePost"
+        tools:layout="@layout/fragment_make_post">
+
+    </fragment>
+
+
+
+
+</navigation>
+
+

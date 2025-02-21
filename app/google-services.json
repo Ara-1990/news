@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801005206016",
+    "project_id": "news-31cad",
+    "storage_bucket": "news-31cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801005206016:android:8975c448b2c9d74cc136e5",
+        "android_client_info": {
+          "package_name": "com.the.news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrpxPwnDn2oVTyND4s0XbhpubceL5TJis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
