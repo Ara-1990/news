@@ -15,7 +15,7 @@ import kotlinx.coroutines.withContext
 class SearchViewModel (application: Application, private val interactor: ArticlesInteractor)
     : BaseMviViewModel<State, Effect, Event,>(application) {
 
-    val API_KEY = "pub_5697910feb7a534c609980f9199058ba59ed9"
+    val API_KEY = ""
 
     private var state = State()
 
